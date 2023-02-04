@@ -11,9 +11,11 @@ class Node
         left = right = null;
     }
 }
-public class class1 {
+public class class23 {
     static int diameter = 0;
-    public static int height(Node node)         // Height of a Binary Tree
+
+    // Height of a Binary Tree
+    public static int height(Node node)         
     {
         if(node == null)    return 0;
 
@@ -25,10 +27,12 @@ public class class1 {
         return Math.max(left, right) + 1;
     }
 
-    public static int diameterOfBT(Node node) {     //Function for calculating diameter
+    //Function for calculating diameter of a BT
+    public static int diameterOfBT(Node node) {     
         height(node);
         return diameter;
     }
+    
     // Longest path from root to leaf node
     /*
      * Create two arrays left and right and call recursively for these two subtrees.
@@ -45,6 +49,7 @@ public class class1 {
 
         return (left.size() > right.size() ? left : right); 
     }
+
     public static void main(String[] args) {
         Node root = new Node(8);
         root.left = new Node(6);
